@@ -4,6 +4,15 @@ import cv2
 from tensorflow.keras.models import load_model
 model = load_model("Cars_and_Roads9857.h5")
 
+from tensorflow.keras import models
+from tensorflow.keras import layers
+from tensorflow.keras import optimizers
+import os
+import glob
+import shutil
+import sys
+import numpy as np
+
 def predict_image(img_path):
     # Read the image and resize it
     img = image.load_img(img_path, target_size=(90, 90))
