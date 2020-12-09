@@ -40,8 +40,8 @@ image = cv2.imread("screenshot.png")
 for i in range(9):
     loc = images[i].location
     img = image[loc['y']+46+30*(i//3):loc['y']+46+30*(i//3)+90, loc['x']+2+30*(i%3):loc['x']+2+30*(i%3)+90]
-    cv2.imwrite("img_"+str(i)+".jpg", img)
-    ans = predict_image("img_"+str(i)+".jpg")
+    cv2.imwrite("imags/img_"+str(i)+".jpg", img)
+    ans = predict_image("imags/img_"+str(i)+".jpg")
     if ans == 1:
         images[i].click()
 
