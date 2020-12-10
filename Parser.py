@@ -22,7 +22,7 @@ def predict_image(img_path):
     x = x.reshape((1,) + x.shape)
     x /= 255.
     result = model.predict([x])[0][0]
-    if result > 0.5:
+    if result > 0.8:
         return 1
     else:
         return 0
