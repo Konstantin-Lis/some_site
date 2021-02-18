@@ -6,7 +6,7 @@ import random
 count3 = 0
 count4 = 0
 #Когда запускать для сбора данных, то поменять i с 10 на большое число
-for i in range(10):
+for i in range(2000):
     driver = webdriver.Chrome("C://Users/USER/PycharmProjects/pythonProject/chromedriver.exe")
     driver.get("https://www.google.com/recaptcha/api2/demo")
 
@@ -29,13 +29,13 @@ for i in range(10):
 
     is_3_3 = True
     for j in range(480):
-        if line[0, i][0] not in range(250, 256):
+        if line[0, j][0] not in range(250, 256):
             is_3_3 = False
             break
-        elif line[0, i][1] not in range(250, 256):
+        elif line[0, j][1] not in range(250, 256):
             is_3_3 = False
             break
-        elif line[0, i][2] not in range(250, 256):
+        elif line[0, j][2] not in range(250, 256):
             is_3_3 = False
             break
 
